@@ -7,13 +7,11 @@ import io.github.theriverelder.housekeeper.data.HousekeeperInventory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
@@ -78,10 +76,10 @@ public class ConfigWandItem extends Item {
         HousekeeperConfig config = HousekeeperConfig.fromStack(stack);
 //        System.out.println(stack.getNbt());
 
-        tooltip.add(new LiteralText(config.getEntries().size() + " group(s)"));
+        tooltip.add(new TranslatableText("desc.housekeeper.bind_inventory_entry_count", config.entryCount()));
         int index = config.getCurrentIndex();
         if (index >= 0 && index < config.getEntries().size()) {
-            tooltip.add(new LiteralText("Current group: " + config.getEntries().get(index).name));
+            tooltip.add(new TranslatableText("desc.housekeeper.bind_inventory_current_entry", config.get(index).name));
         }
     }
 }

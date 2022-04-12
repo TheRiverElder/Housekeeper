@@ -1,0 +1,14 @@
+{
+  "item.housekeeper.config_wand": "配置之杖",
+
+  "text.housekeeper.bind_inventory": "绑定 %s 至 %s",
+
+  "desc.housekeeper.bind_inventory_entry_count": "%d 组",
+  "desc.housekeeper.bind_inventory_current_entry": "当前分组：%s",
+
+  "gui.housekeeper.config_screen.txt_index": "索引：",
+  "gui.housekeeper.config_screen.txt_name": "分组名：",
+  "gui.housekeeper.config_screen.txt_pattern": "正则串：",
+  "gui.housekeeper.config_screen.btn_save": "保存",
+  "gui.housekeeper.config_screen.btn_jump": "跳转"
+}

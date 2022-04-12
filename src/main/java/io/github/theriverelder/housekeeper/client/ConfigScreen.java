@@ -17,6 +17,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
@@ -59,13 +60,13 @@ public class ConfigScreen extends HandledScreen<ConfigScreenHandler> {
         this.x = (width - backgroundWidth) / 2;
         this.y = (height - backgroundHeight) / 2;
 
-        btnSave = this.addDrawableChild(new ButtonWidget(x + 10, y + 10, 50, 10, new LiteralText("Save"), this::onBtnSavePressed));
-        txtIndex = new LiteralText("Index:");
+        btnSave = this.addDrawableChild(new ButtonWidget(x + 10, y + 10, 50, 10, new TranslatableText("gui.housekeeper.config_screen.btn_save"), this::onBtnSavePressed));
+        txtIndex = new TranslatableText("gui.housekeeper.config_screen.txt_index");
         tfdIndex = this.addDrawableChild(new TextFieldWidget(textRenderer, x + 100, y + 10, 20, 10, new LiteralText("0")));
-        btnJump = this.addDrawableChild(new ButtonWidget(x + 130, y + 10, 50, 10, new LiteralText("Jump"), this::onBtnJumpPressed));
-        txtName = new LiteralText("Name:");
+        btnJump = this.addDrawableChild(new ButtonWidget(x + 130, y + 10, 50, 10, new TranslatableText("gui.housekeeper.config_screen.btn_jump"), this::onBtnJumpPressed));
+        txtName = new TranslatableText("gui.housekeeper.config_screen.txt_name");
         tfdName = this.addDrawableChild(new TextFieldWidget(textRenderer, x + 50, y + 30, 100, 10, new LiteralText("Name")));
-        txtPattern = new LiteralText("Pattern:");
+        txtPattern = new TranslatableText("gui.housekeeper.config_screen.txt_pattern");
         tfdPattern = this.addDrawableChild(new TextFieldWidget(textRenderer, x + 50, y + 50, 100, 10, new LiteralText("Pattern")));
 
         refillFields();

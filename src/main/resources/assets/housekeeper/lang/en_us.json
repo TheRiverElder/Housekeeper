@@ -1,0 +1,14 @@
+{
+  "item.housekeeper.config_wand": "Config wand",
+
+  "text.housekeeper.bind_inventory": "Bind %s to %s",
+
+  "desc.housekeeper.bind_inventory_entry_count": "%d group(s)",
+  "desc.housekeeper.bind_inventory_current_entry": "Current entry: %s",
+
+  "gui.housekeeper.config_screen.txt_index": "Index:",
+  "gui.housekeeper.config_screen.txt_name": "Name:",
+  "gui.housekeeper.config_screen.txt_pattern": "Pattern:",
+  "gui.housekeeper.config_screen.btn_save": "Save",
+  "gui.housekeeper.config_screen.btn_jump": "Jump"
+}
