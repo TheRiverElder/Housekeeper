@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "housekeeper",
+  "version": "${version}",
+  "name": "Housekeeper",
+  "description": "A housekeeper that anages youre containers",
+  "authors": [
+    "TheRiverElder"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/housekeeper/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      "io.github.theriverelder.housekeeper.server.HousekeeperServer"
+    ],
+    "client": [
+      "io.github.theriverelder.housekeeper.client.HousekeeperClient"
+    ],
+    "main": [
+      "io.github.theriverelder.housekeeper.Housekeeper"
+    ]
+  },
+  "mixins": [
+    "housekeeper.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.1"
+  }
+}
